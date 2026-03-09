@@ -102,6 +102,10 @@ int main(){
     // (640, 480) (800, 480) (1024, 600)
     InitWindow(1024, 600, "water");
 
+    int currentMonitor = GetCurrentMonitor();
+    int monitorRefreshRate = GetMonitorRefreshRate(currentMonitor);
+    SetTargetFPS(monitorRefreshRate); 
+
     screen_width = GetScreenWidth();
     screen_height = GetScreenHeight();
 
